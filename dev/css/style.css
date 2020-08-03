@@ -1,0 +1,312 @@
+.button {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 0px 35px;
+  height: 70px;
+  line-height: 70px;
+  border: 0px;
+  font-weight: 900;
+  font-size: 16px;
+  transition: 0.3s ease all;
+  transition-property: border,background-color,color;
+  cursor: pointer;
+  outline: 0px; }
+  .button:focus {
+    outline: 0px; }
+  .button--green {
+    color: #E9EBF9;
+    background-color: #73A32F;
+    box-shadow: 0px 12px 12px rgba(115, 163, 47, 0.12); }
+    .button--green:hover {
+      background-color: #658f29; }
+    .button--green:focus {
+      background-color: #577b24; }
+
+.order-page nav {
+  position: relative;
+  z-index: 2;
+  background: transparent; }
+
+.order-page__header {
+  background-color: #202442;
+  padding-top: 85px;
+  padding-bottom: 150px; }
+  .order-page__header h1 {
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 46px;
+    text-align: center;
+    margin-top: 29px;
+    color: #FFFFFF; }
+    @media (max-width: 575px) {
+      .order-page__header h1 {
+        font-size: 24px; } }
+
+.order-page__backbutton {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 50px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  display: inline-block;
+  padding: 0px 25px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  transition: 0.3s ease background-color; }
+  .order-page__backbutton img {
+    margin-right: 10px;
+    vertical-align: middle; }
+  .order-page__backbutton:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.05); }
+
+.orderwrapper {
+  margin-top: -150px; }
+  .orderwrapper__paysystems {
+    margin-top: 60px;
+    margin-bottom: 60px; }
+    .orderwrapper__paysystems img {
+      max-width: 100%; }
+
+.orderform {
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.08);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  padding: 60px 72px; }
+  @media (max-width: 575px) {
+    .orderform {
+      padding: 30px; } }
+  .orderform .formgroup {
+    margin-bottom: 30px; }
+  .orderform__label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    margin-bottom: 5px; }
+  .orderform__input {
+    background-color: #FDFDFD;
+    border: 1px solid #C8C8C8;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    height: 60px;
+    padding: 0px 20px;
+    width: 100%;
+    transition: 0.3s ease border-color;
+    outline: 0px; }
+    @media (max-width: 575px) {
+      .orderform__input {
+        font-size: 12px; } }
+    .orderform__input:focus {
+      border-color: #888888; }
+  .orderform__creditbutton {
+    line-height: 80px;
+    background-color: #EEF0FF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    border: 0px;
+    outline: 0px;
+    font-weight: bold;
+    opacity: 1; }
+    @media (max-width: 420px) {
+      .orderform__creditbutton {
+        font-size: 13px; } }
+    .orderform__creditbutton[disabled] {
+      opacity: 0.5;
+      pointer-events: none;
+      user-select: none; }
+    .orderform__creditbutton:hover {
+      background-color: #d5daff; }
+    .orderform__creditbutton:focus {
+      background-color: #bbc3ff; }
+  .orderform__gpaybutton {
+    line-height: 80px;
+    background-color: #202442;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    border: 0px;
+    outline: 0px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 15px;
+    text-align: center;
+    padding: 0px 25px;
+    opacity: 1; }
+    @media (max-width: 420px) {
+      .orderform__gpaybutton {
+        font-size: 13px;
+        line-height: 1.5;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 80px; } }
+    .orderform__gpaybutton[disabled] {
+      opacity: 0.5;
+      pointer-events: none;
+      user-select: none; }
+    .orderform__gpaybutton img {
+      margin-left: 10px; }
+      @media (max-width: 420px) {
+        .orderform__gpaybutton img {
+          height: 25px; } }
+    .orderform__gpaybutton:hover {
+      background-color: #181b31;
+      color: #fff; }
+    .orderform__gpaybutton:focus {
+      background-color: #0f1120;
+      color: #fff; }
+  .orderform__cardpay {
+    margin-top: 40px;
+    display: none; }
+    .orderform__cardpay--active {
+      display: block; }
+  .orderform__cardpayfooter button[type="submit"] {
+    line-height: 65px;
+    background-color: #FFCC40;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0px 35px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000000;
+    width: 220px;
+    max-width: 100%;
+    border: 0px;
+    outline: 0px;
+    transition: 0.3s ease background-color; }
+    .orderform__cardpayfooter button[type="submit"]:hover {
+      background-color: #ffc117; }
+    .orderform__cardpayfooter button[type="submit"]:focus {
+      background-color: #f3b200; }
+    @media (max-width: 575px) {
+      .orderform__cardpayfooter button[type="submit"] {
+        font-size: 13px; } }
+  .orderform .datecard-input {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .orderform .datecard-input span {
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 44px;
+      color: #E0E0E0;
+      display: inline-block;
+      margin: 0px 10px; }
+    .orderform .datecard-input .orderform__input {
+      text-align: center; }
+  .orderform .creditcard-input {
+    position: relative; }
+    .orderform .creditcard-input__logo {
+      background-color: #ccc;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px;
+      padding: 10px 5px;
+      height: 60%;
+      width: 50px;
+      position: absolute;
+      top: 20%;
+      left: 10px;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }
+      .orderform .creditcard-input__logo img {
+        max-width: 70%;
+        height: auto; }
+    .orderform .creditcard-input .orderform__input {
+      padding-left: 70px; }
+
+.card {
+  font: 16px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 425px;
+  height: 270px;
+  text-align: left;
+  padding: 30px;
+  margin-bottom: 50px;
+  color: #fff;
+  border-radius: 20px;
+  box-sizing: border-box; }
+  .card__number {
+    font-size: 30px;
+    padding: 90px 0 15px;
+    text-align: center; }
+  .card__expiry-date {
+    font-size: 14px;
+    padding-bottom: 20px;
+    text-align: center; }
+  .card__owner {
+    text-align: left; }
+  .card__logo {
+    position: absolute;
+    right: 20px;
+    bottom: 20px; }
+  .card__strip {
+    background: #000;
+    height: 50px;
+    margin-bottom: 30px; }
+  .card__signature {
+    float: left;
+    width: 65%;
+    height: 40px;
+    margin-left: 10px;
+    background: #999; }
+  .card__ccv {
+    float: left;
+    margin-top: 5px;
+    padding: 7px;
+    background-color: #fff;
+    color: #111;
+    line-height: 1; }
+  .card--front {
+    font-size: 16px;
+    font-family: 'Source Code Pro';
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); }
+  .card--back {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left; }

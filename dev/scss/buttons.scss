@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'mixins';
+
+.button {
+  @include border-radius(3px);
+  display: inline-block;
+  padding: 0px 35px;
+  height: 70px;
+  line-height: 70px;
+  border:0px;
+  font-weight: 900;
+  font-size: 16px;
+  transition: 0.3s ease all;
+  transition-property: border,background-color,color;
+  cursor: pointer;
+  outline: 0px;
+  &:focus {
+    outline: 0px;
+  }
+  &--green {
+    // @include buttonRecolor($green);
+    color: #E9EBF9;
+    background-color: #73A32F;
+    box-shadow: 0px 12px 12px rgba(115, 163, 47, 0.12);
+    &:hover {
+      background-color: darken(#73A32F,5%);
+    }
+    &:focus {
+      background-color: darken(#73A32F,10%);
+    }
+  }
+}

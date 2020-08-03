@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Skinchanger — Страница оплаты</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://skinchanger.cc/storage/assets/css/landing.css">
+	<!-- build:css css/style.css -->
+	<link rel="stylesheet" href="/css/style.css">
+	<!-- endbuild -->
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+	<link rel="icon" type="image/png" href="/images/favicon.png" />
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<!-- order-page -->
+	<section id="order-page" class="order-page">
+	  <section class="order-page__header">
+			<div class="container">
+		    <div class="row">
+					<div class="col-lg-8 offset-lg-2 text-center">
+						<nav>
+							<div class="order-page__logo">
+								<a class="logo" href="/">Skinchanger<span>.cc</span></a>
+							</div>
+						</nav>
+					</div>
+		    </div>
+				<div class="row">
+					<div class="col-lg-8 offset-lg-2 text-center">
+						<h1>Оплата заказа</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-8 offset-lg-2">
+						<a href="/" class="order-page__backbutton">
+							<img src="/images/svg/ant-design_arrow-left-outlined.svg" alt="Назад">
+							Вернуться назад
+						</a>
+					</div>
+				</div>
+		  </div>
+	  </section>
+		<!-- Section name -->
+		<section class="orderwrapper">
+		  <div class="container">
+		    <div class="row">
+					<div class="col-lg-8 offset-lg-2">
+						<form action="" class="orderform">
+							<div class="formgroup">
+								<label class="orderform__label">Выслать кассовый чек</label>
+								<input type="text" name="email" class="orderform__input" placeholder="Укажите свой email" id="order-usermail">
+							</div>
+							<div class="orderform__cardchoice">
+								<button class="orderform__creditbutton js-show-cardform" type="button" disabled>
+									Оплатить картой
+								</button>
+								<button class="orderform__gpaybutton" disabled>
+									Оплатить c помощью <img src="/images/svg/logos_google-pay.svg" alt="Google Pay">
+								</button>
+							</div>
+							<div class="orderform__cardpay">
+								<div class="formgroup">
+									<label class="orderform__label">Номер карты</label>
+									<div class="creditcard-input">
+										<div class="creditcard-input__logo">
+											<img src="" alt="" class="js-creditcard-logo">
+										</div>
+										<input type="text" name="cardnumber" class="orderform__input js-credit-card-number" placeholder="Укажите номер карты" required>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12 col-sm-6">
+										<div class="formgroup">
+											<label class="orderform__label">Срок действия карты</label>
+											<div class="datecard-input">
+												<input type="text" name="mouth" class="orderform__input js-date-mask" placeholder="ММ" required>
+												<span>/</span>
+												<input type="text" name="year" class="orderform__input js-date-mask" placeholder="ГГ" required>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-sm-6">
+										<div class="formgroup">
+											<label class="orderform__label">CVC / CVV2</label>
+											<input type="text" name="cvv" class="orderform__input js-cvv-mask" placeholder="CVC / CVV2" required>
+										</div>
+									</div>
+								</div>
+								<div class="orderform__cardpayfooter">
+									<button type="submit">Оплатить</button>
+								</div>
+							</div>
+						</form>
+						<div class="orderwrapper__paysystems">
+							<img src="/images/svg/pay-systems.svg" alt="Платежные системы">
+						</div>
+					</div>
+		    </div>
+		  </div>
+		</section>
+		<!-- /Section name -->
+	</section>
+	<!-- /order-page -->
+
+	<footer>
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-lg-3 col-sm-12">
+	                <p>Copyright Skinchanger.cc 2020</p>
+	            </div>
+	            <div class="col-lg-2 col-sm-3 col-6">
+	                <p>Сменить язык</p>
+	                <style>ul.languages li{display: block}</style>
+	                <ul class="languages">
+	                    <li><a href="https://skinchanger.cc/" onclick="changeLanguage('RU')" title="Russian"><img src="https://skinchanger.cc/storage/assets/img/flags/ru.svg">Русский</a></li>
+	                    <li><a href="https://en.skinchanger.cc/" onclick="changeLanguage('EN')" title="English"><img src="https://skinchanger.cc/storage/assets/img/flags/en.svg">English</a></li>
+	                    <li><a href="https://cn.skinchanger.cc/" onclick="changeLanguage('CN')" title="Chinese"><img src="https://skinchanger.cc/storage/assets/img/flags/cn.svg">中文</a></li>
+	                    <li><a href="https://pl.skinchanger.cc/" onclick="changeLanguage('PL')" title="Polish"><img src="https://skinchanger.cc/storage/assets/img/flags/pl.svg">Polski</a></li>
+	                    <li><a href="https://de.skinchanger.cc/" onclick="changeLanguage('DE')" title="German"><img src="https://skinchanger.cc/storage/assets/img/flags/de.svg">Deutsch</a></li>
+	                    <li><a href="https://pt.skinchanger.cc/" onclick="changeLanguage('PT')" title="Portuguese"><img src="https://skinchanger.cc/storage/assets/img/flags/pt.svg">Portugiesisch</a></li>
+	                    <li><a href="https://tr.skinchanger.cc/" onclick="changeLanguage('TR')" title="Turkish"><img src="https://skinchanger.cc/storage/assets/img/flags/tr.svg">Türk</a></li>
+	                    <li><a href="https://jp.skinchanger.cc/" onclick="changeLanguage('JP')" title="Japanese"><img src="https://skinchanger.cc/storage/assets/img/flags/jp.svg">日本語</a></li>
+	                    <li><a href="https://ro.skinchanger.cc/" onclick="changeLanguage('RO')" title="Romanian"><img src="https://skinchanger.cc/storage/assets/img/flags/ro.svg">Română</a></li>
+	                    <li><a href="https://no.skinchanger.cc/" onclick="changeLanguage('NO')" title="Norwegian"><img src="https://skinchanger.cc/storage/assets/img/flags/no.svg">Norsk</a></li>
+	                    <li><a href="https://th.skinchanger.cc/" onclick="changeLanguage('TH')" title="Thai"><img src="https://skinchanger.cc/storage/assets/img/flags/th.svg">ไทย</a></li>
+	                    <li><a href="https://hl.skinchanger.cc/" onclick="changeLanguage('HL')" title="Dutch"><img src="https://skinchanger.cc/storage/assets/img/flags/hl.svg">Nederlands</a></li>
+	                    <li><a href="https://fn.skinchanger.cc/" onclick="changeLanguage('FN')" title="Finnish"><img src="https://skinchanger.cc/storage/assets/img/flags/fn.svg">Suomalainen</a></li>
+	                    <li><a href="https://cz.skinchanger.cc/" onclick="changeLanguage('CZ')" title="Czech"><img src="https://skinchanger.cc/storage/assets/img/flags/cz.svg">Český</a></li>
+	                    <li><a href="https://it.skinchanger.cc/" onclick="changeLanguage('IT')" title="Italian"><img src="https://skinchanger.cc/storage/assets/img/flags/it.svg">Italiano</a></li>
+	                    <li><a href="https://id.skinchanger.cc/" onclick="changeLanguage('ID')" title="Indonesian"><img src="https://skinchanger.cc/storage/assets/img/flags/id.svg">Indonesia</a></li>
+	                    <li><a href="https://ko.skinchanger.cc/" onclick="changeLanguage('KO')" title="Korean"><img src="https://skinchanger.cc/storage/assets/img/flags/ko.svg">한국어</a></li>
+	                    <li><a href="https://hu.skinchanger.cc/" onclick="changeLanguage('HU')" title="Hungarian"><img src="https://skinchanger.cc/storage/assets/img/flags/hu.svg">Magyar</a></li>
+	                    <li><a href="https://es.skinchanger.cc/" onclick="changeLanguage('ES')" title="Spanish"><img src="https://skinchanger.cc/storage/assets/img/flags/es.svg">Español</a></li>
+	                    <li><a href="https://fr.skinchanger.cc/" onclick="changeLanguage('FR')" title="French"><img src="https://skinchanger.cc/storage/assets/img/flags/fr.svg">Français</a></li>
+	                </ul>
+	            </div>
+	            <div class="col-lg-2 col-sm-3 col-6">
+	                <p>О нас</p>
+	                <ul>
+	                    <li><a href="#" data-toggle="modal" data-target=".modal_contacts">Контакты</a></li>
+	                </ul>
+	                <ul>
+	                    <li><a href="https://vk.me/skinchangercc" target="_blank">Помощь</a></li>
+	                </ul>
+	            </div>
+	            <div class="col-lg-3 col-sm-3 col-6">
+	                <p>Правила</p>
+	                <ul>
+	                    <li><a href="#" data-toggle="modal" data-target=".modal_use">Условия использования</a></li>
+	                </ul>
+	                <ul>
+	                    <li><a data-toggle="modal" data-target=".modal_sub" href="#">Условия подписки</a></li>
+	                </ul>
+	            </div>
+	            <div class="col-lg-2 col-sm-3 col-6">
+	                <p>Поддержка</p>
+	                <ul>
+	                    <li><a href="https://vk.me/skinchangercc" target="_blank">Обратиться</a></li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	</footer>
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+	<!-- build:js js/jquery.maskedinput.min.js -->
+	<script src="/js/jquery.maskedinput.min.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js js/card-info.min.js -->
+	<script src="/js/card-info.min.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js js/main.js -->
+	<script src="/js/main.js"></script>
+	<!-- endbuild -->
+
+	<script type="text/javascript">
+		Order.init();
+	</script>
+
+</body>
+</html>
