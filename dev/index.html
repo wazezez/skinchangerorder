@@ -29,7 +29,7 @@
 	  <section class="order-page__header">
 			<div class="container">
 		    <div class="row">
-					<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 text-center">
 						<nav>
 							<div class="order-page__logo">
 								<a class="logo" href="/">Skinchanger<span>.cc</span></a>
@@ -38,12 +38,12 @@
 					</div>
 		    </div>
 				<div class="row">
-					<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 text-center">
 						<h1>Оплата заказа</h1>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-8 offset-lg-2">
+					<div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
 						<a href="/" class="order-page__backbutton">
 							<img src="/images/svg/ant-design_arrow-left-outlined.svg" alt="Назад">
 							Вернуться назад
@@ -56,54 +56,59 @@
 		<section class="orderwrapper">
 		  <div class="container">
 		    <div class="row">
-					<div class="col-lg-8 offset-lg-2">
-						<form action="" class="orderform">
-							<div class="formgroup">
-								<label class="orderform__label">Выслать кассовый чек</label>
-								<input type="text" name="email" class="orderform__input" placeholder="Укажите свой email" id="order-usermail">
-							</div>
-							<div class="orderform__cardchoice">
-								<button class="orderform__creditbutton js-show-cardform" type="button" disabled>
-									Оплатить картой
-								</button>
-								<button class="orderform__gpaybutton" disabled>
-									Оплатить c помощью <img src="/images/svg/logos_google-pay.svg" alt="Google Pay">
-								</button>
-							</div>
-							<div class="orderform__cardpay">
-								<div class="formgroup">
-									<label class="orderform__label">Номер карты</label>
-									<div class="creditcard-input">
-										<div class="creditcard-input__logo">
-											<img src="" alt="" class="js-creditcard-logo">
-										</div>
-										<input type="text" name="cardnumber" class="orderform__input js-credit-card-number" placeholder="Укажите номер карты" required>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-12 col-sm-6">
-										<div class="formgroup">
-											<label class="orderform__label">Срок действия карты</label>
-											<div class="datecard-input">
-												<input type="text" name="mouth" class="orderform__input js-date-mask" placeholder="ММ" required>
-												<span>/</span>
-												<input type="text" name="year" class="orderform__input js-date-mask" placeholder="ГГ" required>
-											</div>
-										</div>
-									</div>
-									<div class="col-12 col-sm-6">
-										<div class="formgroup">
-											<label class="orderform__label">CVC / CVV2</label>
-											<input type="text" name="cvv" class="orderform__input js-cvv-mask" placeholder="CVC / CVV2" required>
-										</div>
-									</div>
-								</div>
-								<div class="orderform__cardpayfooter">
-									<button type="submit">Оплатить</button>
-								</div>
-							</div>
-						</form>
-						<div class="orderwrapper__paysystems">
+					<div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+						<form id="payment-form" class="orderform">
+                        <div class="formgroup">
+                            <label class="orderform__label">Выслать кассовый чек</label>
+                            <input type="email" class="orderform__input" placeholder="Укажите свой email" id="order-usermail">
+                        </div>
+                        <input type="hidden" id="order-login" value="<?php echo $user['id']; ?>">
+                        <div class="orderform__cardchoice">
+                            <button class="orderform__creditbutton js-show-cardform" type="button"
+                                    disabled>Оплатить картой</button>
+                            <button class="orderform__gpaybutton" disabled>Оплатить c помощью
+                                <img src="/storage/assets/img/logos_google-pay.svg" alt="Google Pay">
+                            </button>
+                        </div>
+                        <div class="orderform__cardpay">
+                            <div class="formgroup">
+                                <label class="orderform__label">Номер карты</label>
+                                <div class="creditcard-input">
+                                    <div class="creditcard-input__logo"><img src="" alt="" class="js-creditcard-logo"></div>
+                                    <input type="text" data-cp="cardNumber" class="orderform__input js-credit-card-number"
+                                           placeholder="Укажите номер карты" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-6">
+                                    <div class="formgroup">
+                                        <label class="orderform__label">Срок действия карты</label>
+                                        <div class="datecard-input">
+                                            <input type="text" data-cp="expDateMonth" class="orderform__input js-date-mask"
+                                                   placeholder="ММ" required>	<span>/</span>
+
+                                            <input type="text" data-cp="expDateYear" class="orderform__input js-date-mask"
+                                                   placeholder="ГГ" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="formgroup">
+                                        <label class="orderform__label">CVC / CVV2</label>
+                                        <input type="text" data-cp="cvv" class="orderform__input js-cvv-mask"
+                                               placeholder="CVC / CVV2" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" data-cp="name" value="CARD HOLDER" required>
+                            <div class="orderform__cardpayfooter">
+                                <button type="submit">Оплатить</button>
+                            </div>
+                        </div>
+                    </form>
+
+						<div class="orderwrapper__paysystems text-center">
+
 							<img src="/images/svg/pay-systems.svg" alt="Платежные системы">
 						</div>
 					</div>
@@ -113,6 +118,20 @@
 		<!-- /Section name -->
 	</section>
 	<!-- /order-page -->
+
+	<!-- Section name -->
+	<section id="" class="">
+	  <div class="container">
+	    <div class="row">
+				<div class="col-12 text-center">
+					<button class="button" data-open="modal" data-target="#popupModal">Открыть модальное окно</button>
+					<button class="button" data-open="modal" data-target="#popupModalSuccess">Открыть успешное</button>
+					<button class="button" data-open="modal" data-target="#popupModalError">Открыть ошибку</button>
+				</div>
+	    </div>
+	  </div>
+	</section>
+	<!-- /Section name -->
 
 	<footer>
 	    <div class="container">
@@ -174,13 +193,154 @@
 	    </div>
 	</footer>
 
+	<!-- popupModal -->
+	<section id="popupModal" class="popup-wrapper">
+		<div class="popup-pay popup">
+				<div class="popup__header">
+					<button class="popup__close" data-popup="#popupModal">
+						<img src="/images/svg/close.svg" alt="Закрыть">
+					</button>
+				</div>
+				<div class="popup__body">
+					<iframe class="popup-pay__iframe" width="586" height="704"></iframe>
+				</div>
+				<div class="popup__footer">
+					<picture class="popup-pay__image">
+							<source media="(min-width: 768px)" srcset="https://show.cloudpayments.ru/assets/img/svg/desktop-pay.svg">
+							<img src="https://show.cloudpayments.ru/assets/img/svg/pay-systems.svg" alt="Платёжные системы">
+					</picture>
+				</div>
+		</div>
+	</section>
+	<!-- /popupModal -->
+
+	<!-- popupModalSuccess -->
+	<section id="popupModalSuccess" class="popup-wrapper">
+		<div class="popup-pay popup">
+				<div class="popup__header">
+					<button class="popup__close" data-popup="#popupModalSuccess">
+						<img src="/images/svg/close.svg" alt="Закрыть">
+					</button>
+				</div>
+				<div class="popup__body">
+					<div class="popup__status">
+						<div class="animation-ctn">
+						  	<div class="icon icon--order-success svg">
+				          <svg xmlns="http://www.w3.org/2000/svg" width="154px" height="154px">
+				            <g fill="none" stroke="#22AE73" stroke-width="2">
+				              <circle cx="77" cy="77" r="72" style="stroke-dasharray:480px, 480px; stroke-dashoffset: 960px;"></circle>
+				              <circle id="colored" fill="#22AE73" cx="77" cy="77" r="72" style="stroke-dasharray:480px, 480px; stroke-dashoffset: 960px;"></circle>
+				              <polyline class="st0" stroke="#fff" stroke-width="5" points="43.5,77.8 63.7,97.9 112.2,49.4 " style="stroke-dasharray:100px, 100px; stroke-dashoffset: 200px;"/>
+				            </g>
+				          </svg>
+				        </div>
+						</div>
+						<h2>Оплата произведена</h2>
+						<p>Сейчас вы будете перенаправлены на основной сайт</p>
+					</div>
+				</div>
+				<div class="popup__footer">
+					<picture class="popup-pay__image">
+							<source media="(min-width: 768px)" srcset="https://show.cloudpayments.ru/assets/img/svg/desktop-pay.svg">
+							<img src="https://show.cloudpayments.ru/assets/img/svg/pay-systems.svg" alt="Платёжные системы">
+					</picture>
+				</div>
+		</div>
+	</section>
+	<!-- /popupModalSuccess -->
+	<!-- popupModalError -->
+	<section id="popupModalError" class="popup-wrapper popup-wrapper--visible">
+		<div class="popup-pay popup">
+				<div class="popup__header">
+					<button class="popup__close" data-popup="#popupModalError">
+						<img src="/images/svg/close.svg" alt="Закрыть">
+					</button>
+				</div>
+				<div class="popup__body">
+					<div class="popup__status">
+						<div class="animation-ctn">
+						  	<div class="icon icon--order-success svg">
+				          <svg xmlns="http://www.w3.org/2000/svg" width="154px" height="154px">
+				            <g fill="none" stroke="#ff0052" stroke-width="2">
+				              <circle cx="77" cy="77" r="72" style="stroke-dasharray:480px, 480px; stroke-dashoffset: 960px;"></circle>
+				              <circle id="colored" fill="#ff0052" cx="77" cy="77" r="72" style="stroke-dasharray:480px, 480px; stroke-dashoffset: 960px;"></circle>
+				              <polyline class="st0" stroke="#fff" stroke-width="5" points="43.5,77.8  112.2,77.8 " style="stroke-dasharray:100px, 100px; stroke-dashoffset: 200px;"/>
+				            </g>
+				          </svg>
+				        </div>
+						</div>
+						<h2>Произошла ошибка</h2>
+						<p>Попробуйте произвести оплату позже</p>
+					</div>
+				</div>
+				<div class="popup__footer">
+					<picture class="popup-pay__image">
+							<source media="(min-width: 768px)" srcset="https://show.cloudpayments.ru/assets/img/svg/desktop-pay.svg">
+							<img src="https://show.cloudpayments.ru/assets/img/svg/pay-systems.svg" alt="Платёжные системы">
+					</picture>
+				</div>
+		</div>
+	</section>
+	<!-- /popupModalError -->
 
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
+	<script>
+	    setInterval(function () {
+	        var el = document.querySelector('[data-cp=name]');
+	        if( el.value == '' ) el.value = 'CARD HOLDER';
+	    }, 1000);
+	</script>
+	<script>
+	    var cloudpayments_config = {
+	        public_id: 'pk_c5ef1d7106856b8af937cf07fa418',
+	        applepay_merchant_id: ''
+	    };
+	</script>
+	<script src="https://widget.cloudpayments.ru/bundles/checkout"></script>
+	<script src="https://skinchanger.cc/storage/assets/js/payments/popup.js"></script>
+	<script>
+	    'use strict';
+	    var $form = document.getElementById('payment-form');
+	    var createCryptogram = function createCryptogram(checkout) {
+	        var result = checkout.createCryptogramPacket();
+	        if (result.success) {
+	            $.ajax({
+	                url: 'https://skinchanger.cc/payments/cp/buy/',
+	                data: {
+	                    cryptogram: result.packet,
+	                    email: document.getElementById('order-usermail').value,
+	                    product: 3,
+	                    login: document.getElementById('order-login').value
+	                },
+	                type: 'POST',
+	                dataType: 'json'
+	            }).done(function (response) {
+	                if (response.status) {
+	                    if (response.form) window.openAcs(response.form);else alert(response.text);
+	                } else alert(response.text);
+	            });
+	        } else {
+	            Object.keys(result.messages).forEach(function (field) {
+	                console.error(result.messages[field]);
+	                var $input = $form.querySelector('[data-cp="' + field + '"]');
+	                $input.classList.remove('card__field--success');
+	                $input.classList.add('card__field--error');
+	            });
+	            if (Object.keys(result.messages).length > 0) alert(Object.values(result.messages).join("\n"));
+	        }
+	    };
 
+	    $form.addEventListener('submit', function (e) {
+	        e.preventDefault();
+	        createCryptogram(new cp.Checkout(cloudpayments_config.public_id, $form));
+	    });
 
+	</script>
+
+	<script src="https://skinchanger.cc/storage/assets/js/card-info.min.js"></script>
 	<!-- build:js js/jquery.maskedinput.min.js -->
 	<script src="/js/jquery.maskedinput.min.js"></script>
 	<!-- endbuild -->
