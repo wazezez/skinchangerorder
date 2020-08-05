@@ -5,8 +5,8 @@ let Order = {
    */
   initCardInfo: function () {
     CardInfo.setDefaultOptions({
-      banksLogosPath: '/images/banks-logos/',
-      brandsLogosPath: '/images/brands-logos/'
+      banksLogosPath: '/storage/assets/img/banks-logos/',
+      brandsLogosPath: '/storage/assets/img/brands-logos/'
     });
     $(document).ready(function(){
       $('.js-credit-card-number').mask("9999 9999 9999 9999", {
@@ -26,7 +26,6 @@ let Order = {
    */
   initMasks: function (){
     $('.js-date-mask').mask("99",{placeholder:" ",});
-    $('.js-cvv-mask').mask("999",{placeholder:" ",});
   },
 
   /**
@@ -58,6 +57,8 @@ let Order = {
     $('.popup__close').on('click',function(){
       let popup = $(this).attr('data-popup');
       $(popup).removeClass('popup-wrapper--visible');
+      $('.modal-backdrop').remove();
+      $('body').removeClass('modal-open');
     });
 
     $('[data-open="modal"]').on('click',function () {
